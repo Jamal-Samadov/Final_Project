@@ -4,24 +4,53 @@ using System.Text;
 
 namespace Final_Project
 {
-    internal class Group
+     class Group
     {
-        public string No;
-        public string Category;
+        public static string No;
         public bool IsOnline;
-        public int Limit;
+
+        byte _limit;
         public string Students;
+        public Categories Category;
+        public static int count = 324;
 
 
 
-        public Group(string No,string Category,bool IsOnline,int Limit,string Students)
+
+
+
+        public Group(string no,Categories category)
         {
-            this.No = No;
-            this.Category = Category;
-            this.IsOnline = true;
-            this.Limit = Limit;
-            this.Students = Students;
+            switch (category)
+            {
+                case Categories.Programming:
+                    No = $"P" + count;
+                    break;
+                case Categories.GraphicDesign:
+                    No = $"GD" + count;
+                    break;              
+                case Categories.SystemAdministration:
+                    No = $"SA" + count;
+                    break;
+            }
+            count++;
+            Category = category;
+            
+
         }
+
+        //public Group(string no,Categories category,int limit,string students)
+        //{
+        //    No = no;
+        //    Category = category;
+        //    Limit = limit;
+        //    Students = students;
+        //    IsOnline = false;
+        //}
+
+
+
+       
     }
 
    

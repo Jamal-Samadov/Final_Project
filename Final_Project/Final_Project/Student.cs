@@ -6,19 +6,31 @@ namespace Final_Project
 {
     internal class Student
     {
-        public static int count = 0;
-        public int Id;
+        public static int count = 100;
+        private static int _Id;      
         public string Fullname;
-        public int GroupNo;
+        public static int GroupNo = 300; 
         public string Type;
 
 
-        public Student(string Fullname,int GroupNo,string Type)
+        public int Id
+        {
+            get
+            {
+                return _Id;
+            }
+            set
+            {
+                _Id = value;
+            }
+        }
+
+        public Student(string fullname,int groupNo,string type)
         {
             Id = count++;
-            this.Fullname = Fullname;
-            this.GroupNo = GroupNo;
-            this.Type = Type;
+            Fullname = fullname;
+            GroupNo = groupNo;
+            Type = type;
         }
 
     }

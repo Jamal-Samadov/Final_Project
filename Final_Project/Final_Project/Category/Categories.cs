@@ -2,14 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Final_Project.Enum
+namespace Final_Project
 {
     enum Categories
     {
         Programming = 1,
         GraphicDesign,
-        IT_HelpDesk,
-        DigitalMarketing,
-
+        SystemAdministration,
     }
 }
