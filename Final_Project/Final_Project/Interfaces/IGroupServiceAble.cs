@@ -7,12 +7,12 @@ namespace Final_Project.Interfaces
     internal interface IGroupServiceAble
     {
         public List<Group> Groups { get; }
-        string CreateGroup();
+        void CreateGroup(byte category, byte offandon);
         void ShowAllGroup();
         void EditGroup(string oldNo, string newNo);
-        void ShowAllStudentsByGroup();
+        void ShowAllStudentsByGroup(string no);
         void ShowAllStudents();
-        void CreateStudents();
+        void CreateStudents(string name, string surname);
         void RemoveStudents();
     }
 }

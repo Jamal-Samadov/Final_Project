@@ -7,7 +7,7 @@ namespace Final_Project
     enum Categories
     {
         Programming = 1,
-        GraphicDesign,
-        SystemAdministration,
+        Graphic_Design,
+        System_Administration,
     }
 }
