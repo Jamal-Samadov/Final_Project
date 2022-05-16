@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 
+
 namespace Final_Project
 {
     internal class Student
     {
+
         public static int count = 100;
         private static int _Id;      
         public string Fullname;
@@ -67,7 +69,6 @@ namespace Final_Project
             this.type = type;
         }
 
-        
         
     }
 }

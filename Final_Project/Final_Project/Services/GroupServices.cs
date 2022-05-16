@@ -49,7 +49,7 @@ namespace Final_Project.Services
                 }
                 else
                 {
-                    Console.WriteLine($"There is no group --- {oldNo}");
+                    Console.WriteLine($"There is groupNo --- {oldNo}");
                 }               
             }
             else

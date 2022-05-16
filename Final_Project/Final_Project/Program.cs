@@ -7,7 +7,18 @@ namespace Final_Project
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello guys. Welcoxme to our Academy. You are right adress!");
+            Console.WriteLine("Hello guys. Welcome to \n");
+
+            Console.WriteLine(@"
+    ..|'''.|  ..|''||   '||''|.   '||''''|          |       ..|'''.|     |     '||''|.   '||''''|  '||    ||' '||' '|' 
+  .|'     '  .|'    ||   ||   ||   ||  .           |||    .|'     '     |||     ||   ||   ||  .     |||  |||    || |   
+  ||         ||      ||  ||    ||  ||''|          |  ||   ||           |  ||    ||    ||  ||''|     |'|..'||     ||    
+  '|.      . '|.     ||  ||    ||  ||            .''''|.  '|.      .  .''''|.   ||    ||  ||        | '|' ||     ||    
+   ''|....'   ''|...|'  .||...|'  .||.....|     .|.  .||.  ''|....'  .|.  .||. .||...|'  .||.....| .|. | .||.   .||. ");
+
+
+            Console.WriteLine("\nYou are right adress!\n");
+
             Console.WriteLine("\nOkey let's introduce our course \nWhich course do you want to choose?\n");
 
             int selection;
@@ -29,7 +40,7 @@ namespace Final_Project
                     switch (selection)
                     {
                       case 1:
-                            MenuServices.CreatehallMenu();                      
+                            MenuServices.CreateGroupMenu();                      
                             break;
                             case 2:
                             MenuServices.ShowAllGroupMenu();
@@ -41,7 +52,7 @@ namespace Final_Project
                             MenuServices.ShowAllStudentsByGroupMenu();
                             break;
                         case 5:
-                            MenuServices.ShowStudentsMenu();
+                            MenuServices.ShowAllStudentsMenu();
                             break;
                         case 6:
                             MenuServices.CreateStudentMenu();

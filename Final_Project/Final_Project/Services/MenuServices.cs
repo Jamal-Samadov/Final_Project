@@ -9,9 +9,9 @@ namespace Final_Project.Services
     {
         public static GroupServices groupServices = new GroupServices();
 
-        public static void CreatehallMenu()
+        public static void CreateGroupMenu()
         {
-
+            cc:
             Console.WriteLine("\nPlease choose any category");
             foreach (var item in Enum.GetValues(typeof(Categories)))
             {
@@ -27,6 +27,7 @@ namespace Final_Project.Services
             else
             {
                 Console.WriteLine("Something went wrong");
+                goto cc;
             }
         aa:
             Console.WriteLine("1. Online \n2. Offline \nPlease choose option Offline or Online lesson\n");
@@ -55,35 +56,31 @@ namespace Final_Project.Services
         }
         public static void EditGroupMenu()
         {
-            Console.WriteLine("Please enter group no ");
+            Console.WriteLine("Please enter old group no ");
             string no = Console.ReadLine();
 
             Console.WriteLine("Please enter new group no");
             string newNo = Console.ReadLine();
-            groupServices.EditGroup(no, newNo);
+            groupServices.EditGroup(newNo, no);
 
         }
-        public static void ShowStudentsMenu()
-        {
-            groupServices.ShowAllStudents();
-        }
+
         public static void ShowAllStudentsByGroupMenu()
         {
             Console.WriteLine("Please enter group no ");
             string no = Console.ReadLine();
             groupServices.ShowAllStudentsByGroup(no);
+
         }
         public static void RemoveStudentsMenu()
         {
             string student = "1. Fullname: Elshan Aliyev, Group: P-324, Type: Zemanetli";
             string student1 = "2. Fullname: Khalilbey Khalilbeyli Group: GD-325 Type: Zemanetsiz";
             string student2 = "3. Fullname: Kamran Gasimov Group: SA-326, Type: Zemanetli";
-            Console.WriteLine("All students\n" + student + " \n" + student1 + "\n" + student2 + "\n");
-
+            Console.WriteLine("\nAll students\n" + student + " \n" + student1 + "\n" + student2 + "\n");
             string choose = Console.ReadLine();
             Console.WriteLine("Your choosing: " + choose);
-
-            Console.WriteLine("\nWhy do you want to delete the student? Please indicate the reason\n");
+            Console.WriteLine("\nWhy do you want to remove the student? Please explain the reason\n");
 
             foreach (var item in Enum.GetValues(typeof(Reason)))
             {
@@ -118,7 +115,6 @@ namespace Final_Project.Services
         }
         public static void CreateStudentMenu()
         {
-
             Console.WriteLine("Please write your name:");
             string name = Console.ReadLine();         
             Console.WriteLine("\nPlease write your surname:");            
@@ -131,24 +127,18 @@ namespace Final_Project.Services
             Random num = new Random();
             number = num.Next();
 
-            //string result = name + surname;
-            //int digit;
-
-            //if(digit == result)
-            //{
-            //    Console.WriteLine("Please write correctly");
-            //}
-
-
             Console.WriteLine("***********");
             Console.WriteLine("Fullname: " + name + " " + surname + "\n" + "Your ID number: " + num.Next(1000));
+            string result = name + surname + num.Next(1000);
             Console.WriteLine("***********");
-
-
-
-
-
-
+        }
+        public static void ShowAllStudentsMenu()
+        {
+            string student = "Fullname: Elshan Aliyev, Group: P-324, Type: Zemanetli";
+            string student1 = "Fullname: Khalilbey Khalilbeyli, Group: GD-325, Type: Zemanetsiz";
+            string student2 = "Fullname: Kamran Gasimov, Group: SA-326, Type: Zemanetli";
+            Console.WriteLine("\nAll students\n" + "\n" + student + " \n" + student1 + "\n" + student2 + "\n");
+            
         }
 
 
